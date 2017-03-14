@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewBag.Title = "Country";
+}
+
+<h2>Country</h2>
+
+<tr>
+    <td>
+        @*@Html.LabelFor(model => model.Country)*@
+    </td>
+    <td>@Html.DropDownList("Country", ViewBag.Country as SelectList, new { Styles = "width:300px" })</td>
+</tr>

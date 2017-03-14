@@ -1,0 +1,154 @@
+﻿@model Assignment.Models.Order_warehouse
+
+@{
+    ViewBag.Title = "Create";
+}
+@if (Session["Username"] != null)
+{
+    <h1>Hello, @Session["Username"].ToString()</h1>
+}
+<h2>Create</h2>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        @if (Session["Username"] != null) { <h4>@Session["Username"].ToString()'s Order</h4> }
+        <hr />
+        @Html.ValidationSummary(true)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.TypeOfDocument, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TypeOfDocument)
+                @Html.ValidationMessageFor(model => model.TypeOfDocument)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Urgency, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Urgency)
+                @Html.ValidationMessageFor(model => model.Urgency)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Quality, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Quality)
+                @Html.ValidationMessageFor(model => model.Quality)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Spacing, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Spacing)
+                @Html.ValidationMessageFor(model => model.Spacing)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.NumberofPages, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.NumberofPages)
+                @Html.ValidationMessageFor(model => model.NumberofPages)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.AcademicLevel, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.AcademicLevel)
+                @Html.ValidationMessageFor(model => model.AcademicLevel)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.SubjectArea, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.SubjectArea)
+                @Html.ValidationMessageFor(model => model.SubjectArea)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Style, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Style)
+                @Html.ValidationMessageFor(model => model.Style)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.NumberofSources, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.NumberofSources)
+                @Html.ValidationMessageFor(model => model.NumberofSources)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Dictionary, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Dictionary)
+                @Html.ValidationMessageFor(model => model.Dictionary)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.OrderDescription, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.OrderDescription)
+                @Html.ValidationMessageFor(model => model.OrderDescription)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CountryID, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("CountryId", "--Select Country--")
+                @*@Html.DropDownList("Country", ViewBag.CountryId as SelectList, "--Select Country--")*@
+                @Html.ValidationMessageFor(model => model.CountryID)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Reference_ID, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("ReferenceId", "--References--")
+                @*@Html.DropDownList("ReferenceList", ViewBag.ReferenceList as SelectList, "--Select Reference--")*@
+                @Html.ValidationMessageFor(model => model.Reference_ID)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Citation_ID, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("CitationId", "--Select--")
+                @*@Html.DropDownList("CitationList", ViewBag.CitationList as SelectList, "--Select Citation--")*@
+                @Html.ValidationMessageFor(model => model.Citation_ID)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.LanguageID, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("LanguageId", "--Select Language--")
+                @*@Html.DropDownList("CitationList", ViewBag.CitationList as SelectList, "--Select Citation--")*@
+                @Html.ValidationMessageFor(model => model.LanguageID)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

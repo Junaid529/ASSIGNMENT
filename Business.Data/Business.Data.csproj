@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{37BF3D88-2D31-47B6-A6F2-9375A38C76F0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Business.Data</RootNamespace>
+    <AssemblyName>Business.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Context.cs" />
+    <Compile Include="Migrations\201703100247214_initial.cs" />
+    <Compile Include="Migrations\201703100247214_initial.Designer.cs">
+      <DependentUpon>201703100247214_initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703100249424_n.cs" />
+    <Compile Include="Migrations\201703100249424_n.Designer.cs">
+      <DependentUpon>201703100249424_n.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703100252370_n1.cs" />
+    <Compile Include="Migrations\201703100252370_n1.Designer.cs">
+      <DependentUpon>201703100252370_n1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703100950187_CRC.cs" />
+    <Compile Include="Migrations\201703100950187_CRC.Designer.cs">
+      <DependentUpon>201703100950187_CRC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703110337240_H_Reg.cs" />
+    <Compile Include="Migrations\201703110337240_H_Reg.Designer.cs">
+      <DependentUpon>201703110337240_H_Reg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703110517122_PassType.cs" />
+    <Compile Include="Migrations\201703110517122_PassType.Designer.cs">
+      <DependentUpon>201703110517122_PassType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703110539460_PassType1.cs" />
+    <Compile Include="Migrations\201703110539460_PassType1.Designer.cs">
+      <DependentUpon>201703110539460_PassType1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703110542596_PassType2.cs" />
+    <Compile Include="Migrations\201703110542596_PassType2.Designer.cs">
+      <DependentUpon>201703110542596_PassType2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703110544194_PassType3.cs" />
+    <Compile Include="Migrations\201703110544194_PassType3.Designer.cs">
+      <DependentUpon>201703110544194_PassType3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703112301006_secondary.cs" />
+    <Compile Include="Migrations\201703112301006_secondary.Designer.cs">
+      <DependentUpon>201703112301006_secondary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703112356156_secondary1.cs" />
+    <Compile Include="Migrations\201703112356156_secondary1.Designer.cs">
+      <DependentUpon>201703112356156_secondary1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703140426306_post.cs" />
+    <Compile Include="Migrations\201703140426306_post.Designer.cs">
+      <DependentUpon>201703140426306_post.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703140432550_post1.cs" />
+    <Compile Include="Migrations\201703140432550_post1.Designer.cs">
+      <DependentUpon>201703140432550_post1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\IRepository.cs" />
+    <Compile Include="Repository\Repository.cs" />
+    <Compile Include="Services\ModelServices.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201703100247214_initial.resx">
+      <DependentUpon>201703100247214_initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703100249424_n.resx">
+      <DependentUpon>201703100249424_n.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703100252370_n1.resx">
+      <DependentUpon>201703100252370_n1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703100950187_CRC.resx">
+      <DependentUpon>201703100950187_CRC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703110337240_H_Reg.resx">
+      <DependentUpon>201703110337240_H_Reg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703110517122_PassType.resx">
+      <DependentUpon>201703110517122_PassType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703110539460_PassType1.resx">
+      <DependentUpon>201703110539460_PassType1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703110542596_PassType2.resx">
+      <DependentUpon>201703110542596_PassType2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703110544194_PassType3.resx">
+      <DependentUpon>201703110544194_PassType3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703112301006_secondary.resx">
+      <DependentUpon>201703112301006_secondary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703112356156_secondary1.resx">
+      <DependentUpon>201703112356156_secondary1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703140426306_post.resx">
+      <DependentUpon>201703140426306_post.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703140432550_post1.resx">
+      <DependentUpon>201703140432550_post1.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Business.Data.Access\Business.Data.Access.csproj">
+      <Project>{f680699d-6ac8-4728-968b-1fd5179db46d}</Project>
+      <Name>Business.Data.Access</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Business.Model\Business.Model.csproj">
+      <Project>{b44c191a-66cd-4e59-b451-502a924889a7}</Project>
+      <Name>Business.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
