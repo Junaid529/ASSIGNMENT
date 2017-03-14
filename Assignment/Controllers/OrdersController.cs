@@ -59,20 +59,20 @@ namespace Assignment.Controllers
             _repository.Save();
             return Json(orders, JsonRequestBehavior.AllowGet);
         }
-        // POST: /Orders/Create
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public ActionResult Create(ORDER_WAREHOUSE orders)
-        //{
-        //    //if User session
-        //    if(ModelState.IsValid)
-        //    {
-        //        _repository.Insert(orders);
-        //        _repository.Save();
-        //        return RedirectToAction("Done");
-        //    }
-        //    return View(orders);
-        //}
+         //POST: /Orders/Create
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create(ORDER_WAREHOUSE orders)
+        {
+            //if User session
+            if(ModelState.IsValid)
+            {
+                _repository.Insert(orders);
+                _repository.Save();
+                return RedirectToAction("Done");
+            }
+            return View(orders);
+        }
         public ActionResult Done()
         {
             return View();
